@@ -63,7 +63,7 @@ Keeps track of the WorkerPIDs and a JobList. The main task of the loop are:
 1.    Whenever a worker among the WorkerPIDs sends a free message, prints “server got free” with the PID of the worker then checks the JobList and assign the first job in it to the worker, removing it from the list. 
 2.    Whenever a client sends a job request it saves all important information as an element in the JobList. It prints “server got value” with the job data and sends an ACK to the client. 
 3.    If a worker sends back a result the server compresses it and forwards it back to the correct client.
-4.    If it receives a stop it kills all workers. It also sends back a no_reply to all the clients whose jobs have not been assigned (Still in JobList). Than it terminates.
+4.    If it receives a stop it kills all workers. It also sends back a no_reply to all the clients whose jobs have not been assigned (Still in JobList). Then it terminates.
  
  
  ## Worker/0
